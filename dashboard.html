@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigo Education Group | Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="assets/images/indigo-logo.png" alt="Indigo Logo" class="logo">
+                <h1>Okul Raporları</h1>
+            </div>
+            <div class="header-right">
+                <span id="current-date"></span>
+                <a href="javascript:logout()" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Çıkış
+                </a>
+                <script>
+                    function logout() {
+                        // Kullanıcı tipini localStorage'dan sil
+                        localStorage.removeItem('userType');
+                        window.location.href = "index.html";
+                    }
+                    
+                    // Sayfa yüklendiğinde kullanıcı tipini kaydet
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const schoolParam = urlParams.get('school');
+                    if (schoolParam) {
+                        localStorage.setItem('userType', schoolParam);
+                    }
+                </script>
+            </div>
+        </header>
+
+        <main class="schools-grid">
+            <!-- Okul Kartları -->
+            <div class="school-card" data-school="sapat">
+                <div class="card-header">
+                    <h2>Indigo Sapat Primary</h2>
+                    <span class="school-id">ID: 001</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-value">250</span>
+                        <span class="stat-label">Toplam Kayıt</span>
+                    </div>
+                    <div class="stat-item highlight">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Yeni Kayıt</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="schools/1-indigo-primary.html" class="details-btn">
+                        Detayları Gör <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="school-card" data-school="asylkech">
+                <div class="card-header">
+                    <h2>Indigo Asylkech Girls</h2>
+                    <span class="school-id">ID: 002</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-value">250</span>
+                        <span class="stat-label">Toplam Kayıt</span>
+                    </div>
+                    <div class="stat-item highlight">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Yeni Kayıt</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="schools/2-asylkech-girls.html" class="details-btn">
+                        Detayları Gör <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="school-card" data-school="international">
+                <div class="card-header">
+                    <h2>Indigo Sapat International</h2>
+                    <span class="school-id">ID: 003</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-value">250</span>
+                        <span class="stat-label">Toplam Kayıt</span>
+                    </div>
+                    <div class="stat-item highlight">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Yeni Kayıt</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="schools/3-indigo-international.html" class="details-btn">
+                        Detayları Gör <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="school-card" data-school="prime">
+                <div class="card-header">
+                    <h2>Indigo Prime Academy</h2>
+                    <span class="school-id">ID: 004</span>
+                </div>
+                <div class="card-body">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span class="stat-value">250</span>
+                        <span class="stat-label">Toplam Kayıt</span>
+                    </div>
+                    <div class="stat-item highlight">
+                        <i class="fas fa-user-plus"></i>
+                        <span class="stat-value">15</span>
+                        <span class="stat-label">Yeni Kayıt</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="schools/4-indigo-academy.html" class="details-btn">
+                        Detayları Gör <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Diğer okul kartları -->
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© 2024 Indigo Education Group. Tüm hakları saklıdır.</p>
+            <p>Son güncelleme: <span id="last-updated"></span></p>
+        </footer>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

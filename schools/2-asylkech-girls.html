@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigo Sapat Primary - Rapor</title>
+    <link rel="stylesheet" href="../assets/css/school-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="school-detail-container">
+        <!-- Header -->
+        <header class="detail-header">
+            <div class="back-button">
+                <a href="dashboard.html" id="backButton" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Dashboard'a Dön
+                </a>
+                
+                <script>
+                    document.getElementById('backButton').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const userType = localStorage.getItem('userType');
+                        if (userType && userType !== 'all') {
+                            window.location.href = `dashboard.html?school=${userType}`;
+                        } else {
+                            window.location.href = 'dashboard.html';
+                        }
+                    });
+                </script>
+            </div>
+            <div class="school-title">
+                <img src="../assets/images/asylkech-icon.jpg" alt="Okul İkonu" class="school-icon">
+                <h1>Indigo Asylkech Girls</h1>
+                <span class="last-updated">Son güncelleme: 15.03.2024</span>
+            </div>
+            <div class="print-button">
+                <button onclick="window.print()">
+                    <i class="fas fa-print"></i> Yazdır
+                </button>
+            </div>
+        </header>
+
+        <!-- Ana İçerik -->
+        <main>
+            <!-- Özet Kartlar -->
+            <div class="summary-cards">
+                <div class="summary-card total">
+                    <i class="fas fa-users"></i>
+                    <div class="card-content">
+                        <span class="value">250</span>
+                        <span class="label">Toplam Kayıt</span>
+                    </div>
+                </div>
+                
+                <div class="summary-card new">
+                    <i class="fas fa-user-plus"></i>
+                    <div class="card-content">
+                        <span class="value">15</span>
+                        <span class="label">Yeni Kayıt</span>
+                    </div>
+                </div>
+                
+                <div class="summary-card renewed">
+                    <i class="fas fa-sync-alt"></i>
+                    <div class="card-content">
+                        <span class="value">120</span>
+                        <span class="label">Yenilenen</span>
+                    </div>
+                </div>
+                
+                <div class="summary-card deleted">
+                    <i class="fas fa-user-minus"></i>
+                    <div class="card-content">
+                        <span class="value">5</span>
+                        <span class="label">Ayrılanlar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detaylı Rapor Tablosu -->
+            <div class="report-table">
+                <table>
+                    <tr>
+                        <th>Metrik</th>
+                        <th>Değer</th>
+                        <th>Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-percentage"></i> İndirim Ortalaması</td>
+                        <td>%10</td>
+                        <td>Ortalama uygulanan indirim oranı</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-money-bill-wave"></i> Toplam Ücret</td>
+                        <td>45.000₺</td>
+                        <td>Bu dönem tahsil edilen toplam</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-chart-line"></i> Büyüme Oranı</td>
+                        <td>%6.3</td>
+                        <td>Geçen aya göre artış</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-calendar-alt"></i> Rapor Dönemi</td>
+                        <td>Mart 2024</td>
+                        <td>Verilerin kapsadığı tarih aralığı</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Ek Bilgiler -->
+            <div class="additional-info">
+                <div class="info-box">
+                    <h3><i class="fas fa-sticky-note"></i> Notlar</h3>
+                    <ul>
+                        <li>Yeni kayıtların %30'u erken kayıt kampanyasından</li>
+                        <li>2 öğrenci burslu kayıt yaptırdı</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-bullseye"></i> Hedefler</h3>
+                    <ul>
+                        <li>Nisan ayı için 20 yeni kayıt hedefi</li>
+                        <li>İndirim oranını %8'e düşürme</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="detail-footer">
+            <p>© 2024 Indigo Education Group | ID: SCH-001</p>
+        </footer>
+    </div>
+</body>
+</html>

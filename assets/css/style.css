@@ -1,0 +1,113 @@
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Logo ve Başlık */
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.logo-section h1 {
+    color: #4B0082;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.logo-section p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Form Kısmı */
+.login-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #9370DB;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #9370DB;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75,0,130,0.1);
+}
+
+.toggle-password {
+    right: 15px;
+    left: auto;
+    cursor: pointer;
+}
+
+/* Giriş Butonu */
+.login-btn {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #3A0068;
+}
+
+.login-btn i {
+    margin-right: 8px;
+}
+
+/* Yardımcı Metin */
+.help-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.help-text p {
+    margin: 5px 0;
+}
